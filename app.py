@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -10,6 +10,3 @@ def index():
 def action():
     button = request.form['button']
     return f"Stiskl jsi: {button}"
-
-if __name__ == '__main__':
-    app.run(debug=True)
